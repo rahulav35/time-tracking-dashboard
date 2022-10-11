@@ -94,9 +94,10 @@ function App() {
           </h1>
         </div>
         <div className={styles.detailsdiv}>
-          {data.map((item, index) => {
+          {data.map((item, index, i) => {
             return (
               <Tasks
+                key={i}
                 backgroundColor={images[index].color}
                 backgroundImage={images[index].image}
                 duration={distribute(item).current}
