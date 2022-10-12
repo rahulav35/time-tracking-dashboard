@@ -72,3 +72,115 @@ column-gap: 14px;
   font-weight: 300;
 
 }
+
+
+@media(max-width:600px){
+
+
+  .maindiv{
+    width:100vw ;
+    min-height:100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: hsl(226, 43%, 10%);
+  }
+ 
+
+  .firstdiv{
+    width: 100%;
+    height: 60%;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 20px;
+  }
+
+
+.profilediv{
+  height: 100%;
+  width: 100%;
+  outline: 1px solid black;
+  border-radius: 20px;
+  background-color:  hsl(235, 46%, 20%);
+  min-height: 200px;
+
+}
+
+.namediv{
+  height: 65%;
+  width: 100%;
+  display: flex;
+
+  border-radius: 20px;
+  padding-left: 20px;
+  box-sizing: border-box;
+    background-color: hsl(246, 80%, 60%) ;
+}
+
+
+.namediv img{
+  width: 14vw;
+  height: 14vw;
+  
+  margin-top: 30px;
+  border-radius: 100%;
+  border: 2px solid white ;
+}
+.excludeimage{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 20px
+}
+.report{
+  font-size: x-small;
+  color: white;
+  font-weight:100;
+
+}
+.jeremy{
+  font-size:x-large;
+  margin-top: -10px;
+  color: white;
+  font-weight: 300;
+
+}
+
+.bottomdiv{
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: space-evenly;
+}
+
+.firstdiv{
+  width: 88%;
+  height: 82%;
+  
+  
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 20px;
+}
+
+.detailsdiv{
+  height: 100%;
+  width: 100%;
+  
+  border-radius: 20px;
+  display: grid;
+grid-template-columns:repeat(1,1fr);
+place-items: center;
+margin-top: 20px;
+
+row-gap: 32px;
+column-gap: 14px;
+}
+
+
+
+}

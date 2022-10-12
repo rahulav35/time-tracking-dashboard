@@ -56,48 +56,52 @@ function App() {
         <div className={styles.profilediv}>
           <div className={styles.namediv}>
             <img src="/assets/images/image-jeremy.png" alt="" />
-            <h3 className={styles.report}> Report for</h3>
-            <h1 className={styles.jeremy}> Jeremy Robson</h1>
+            <div className={styles.excludeimage}>
+              <h3 className={styles.report}> Report for</h3>
+              <h1 className={styles.jeremy}> Jeremy Robson</h1>
+            </div>
           </div>
-          <h1
-            style={{
-              color: selected === "daily" ? "white" : " hsl(235, 45%, 61%)",
-            }}
-            onClick={() => {
-              setSelected("daily");
-            }}
-            className={styles.daily}
-          >
-            Daily
-          </h1>
-          <h1
-            style={{
-              color: selected === "weekly" ? "white" : " hsl(235, 45%, 61%)",
-            }}
-            onClick={() => {
-              setSelected("weekly");
-            }}
-            className={styles.daily}
-          >
-            Weekly
-          </h1>
-          <h1
-            style={{
-              color: selected === "monthly" ? "white" : " hsl(235, 45%, 61%)",
-            }}
-            onClick={() => {
-              setSelected("monthly");
-            }}
-            className={styles.daily}
-          >
-            Monthly
-          </h1>
+          <div className={styles.bottomdiv}>
+            <h1
+              style={{
+                color: selected === "daily" ? "white" : " hsl(235, 45%, 61%)",
+              }}
+              onClick={() => {
+                setSelected("daily");
+              }}
+              className={styles.daily}
+            >
+              Daily
+            </h1>
+            <h1
+              style={{
+                color: selected === "weekly" ? "white" : " hsl(235, 45%, 61%)",
+              }}
+              onClick={() => {
+                setSelected("weekly");
+              }}
+              className={styles.daily}
+            >
+              Weekly
+            </h1>
+            <h1
+              style={{
+                color: selected === "monthly" ? "white" : " hsl(235, 45%, 61%)",
+              }}
+              onClick={() => {
+                setSelected("monthly");
+              }}
+              className={styles.daily}
+            >
+              Monthly
+            </h1>
+          </div>
         </div>
         <div className={styles.detailsdiv}>
-          {data.map((item, index, i) => {
+          {data.map((item, index) => {
             return (
               <Tasks
-                key={i}
+                key={index}
                 backgroundColor={images[index].color}
                 backgroundImage={images[index].image}
                 duration={distribute(item).current}
